@@ -1,0 +1,65 @@
+{
+ "model": "palm",
+ "repo": "LM_2022_PaLM",
+ "target_repo": "LM_Dec_Base_PaLM",
+ "category": "Base",
+ "upstream": "vendored from RichardMinsooGo/LM_2022_PaLM (see LICENSE in vendor folder if present)",
+ "unified": [
+  "parallel blocks, rotary, SwiGLU (upstream defaults)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "scaling",
+ "started": "2026-11-02 11:35:08",
+ "smoke": false,
+ "rows": [
+  {
+   "len": 512,
+   "train": {
+    "peak_mb": 224.3,
+    "ms": 18.0,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 72.2,
+    "ms": 6.0,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 1024,
+   "train": {
+    "peak_mb": 554.3,
+    "ms": 21.0,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 144.5,
+    "ms": 9.0,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 2048,
+   "train": {
+    "peak_mb": 1808.3,
+    "ms": 49.4,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 418.0,
+    "ms": 19.9,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 4096,
+   "note": "not supported (model built for <= 2048)"
+  },
+  {
+   "len": 8192,
+   "note": "not supported (model built for <= 2048)"
+  }
+ ],
+ "seconds": 2.6
+}
